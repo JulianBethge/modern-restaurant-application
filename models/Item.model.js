@@ -7,18 +7,16 @@ const itemSchema = new Schema(
             required: true,
             unique: true
         },
-            price: {
+        price: {
             type: Number,
             required: true
         },
             
-            category: {
-                type: String,
-                enum: ["Starter", "Main", "Dessert", "Drink"]
-
+        category: {
+            type: String,
+            enum: ["Starter", "Main", "Dessert", "Drink"]
         },
-        description: String,
-
+        description: String
     },
     {
         timestamps: true
