@@ -105,6 +105,17 @@ router.post("/menu/:itemId/edit", isAdmin, (req, res, next) => {
 })
 
 // DELETE
+router.post("/menu/:itemId/delete", isAdmin, (req, res, next) => {
+    Item.findByIdAndDelete(req.params.itemId)
+      .then(() => {
+        res.redirect("/menu");
+      })
+      .catch(err => {
+        console.log("Error deleting item...", err);
+        next(err);
+      });
+  
+  });
 
 
 // Export router
