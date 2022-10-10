@@ -17,7 +17,10 @@ const itemSchema = new Schema(
         },
         description: String,
         image_url: String,
-        menuNumber: Number
+        menuNumber: {
+            type: Number,
+            unique: true
+        }
     },
     {
         timestamps: true
