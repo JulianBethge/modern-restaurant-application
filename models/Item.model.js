@@ -11,12 +11,13 @@ const itemSchema = new Schema(
             type: Number,
             required: true
         },
-            
         category: {
             type: String,
             enum: ["Starter", "Main", "Dessert", "Drink"]
         },
-        description: String
+        description: String,
+        image_url: String,
+        menuNumber: Number
     },
     {
         timestamps: true
