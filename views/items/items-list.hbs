@@ -1,0 +1,17 @@
+<h1>Menu</h1>
+
+{{#each items}}
+    <section>
+        <h2>{{this.title}}</h2>
+        <p>
+            Price: € {{this.price}}<br />
+            {{!-- Category: {{this.category}} <br /> --}}
+            <a href="/menu/{{this._id}}">More details</a> |
+            <a href="/menu/{{this._id}}/edit">Edit</a> |
+            <form action="/menu/{{_id}}/delete" method="POST">
+                <button>Delete</button>
+            </form>
+        </p>
+
+    </section>
+{{/each}}
