@@ -36,8 +36,35 @@ router.get("/menu/:itemId", (req, res, next) => {
 });
 
 // CREATE: Display form
+router.get("/items/create", (req, res, next) => {
+    res.render("items/item-create");    
+});
 
 // CREATE: Process form
+router.post("/items/create", (req, res, next) => {
+    
+    console.log("File data.." + req.body.image_url);
+    
+
+    const newItem = {
+        title: req.body.title,
+        price: req.body.price,
+        category: req.body.category,
+        description: req.body.description,
+        image_url: "../images/"+ req.body.image_url,
+        menuNumber: req.body.menuNumber,
+    }
+
+    console.log("Here the new Item.." + newItem);
+
+    Item.create(newItem)
+    .then( newItem => {
+        res.redirect("/menu");
+    })
+    .catch()
+
+     
+});
 
 // UPDATE: Display form
 
