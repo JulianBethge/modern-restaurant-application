@@ -1,0 +1,27 @@
+<section>
+    <h2>{{title}}</h2>
+
+    <p>
+        <strong>Price: </strong> {{price}} <br />
+    </p>
+    <p>
+        <strong>Description:</strong>
+        {{description}}
+    </p>
+    <p>
+        <strong>Category:</strong>
+        {{category}}
+    </p>
+    <p>
+        <img class="card-img-details" src="{{image_url}}" alt="">
+        
+    </p>
+
+    <p>
+        <form action="/menu/{{_id}}/delete" method="POST">
+            <button>Delete</button>
+        </form>
+    </p>
+
+</section>
+<a href="/menu/{{this._id}}/edit">Edit Item</a> | <a href="/menu">Back</a>
