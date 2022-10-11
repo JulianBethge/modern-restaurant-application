@@ -41,7 +41,7 @@ router.get("/menu/:itemId", (req, res, next) => {
 });
 
 // CREATE: Display form
-router.get("/menu/create", (req, res, next) => {
+router.get("/menu/create", isLoggedIn, isAdmin, (req, res, next) => {
     res.render("items/item-create");    
 });
 
