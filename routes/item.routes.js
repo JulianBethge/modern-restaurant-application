@@ -17,7 +17,7 @@ const router = require("express").Router();
 // READ: List all items
 router.get("/menu", (req, res, next) => {
 
-    let {startersArr, mainsArr, desertsArr, drinksArr} = [];
+    let {startersArr, mainsArr, desertsArr, drinksArr} = [];    
 
 
     Item.find()
@@ -46,7 +46,7 @@ router.get("/menu", (req, res, next) => {
                 return v;
             }
         })
-
+        
         res.render("items/items-list", {startersArr, mainsArr, desertsArr, drinksArr, user: req.session.user} );
     })
     .catch( err => {
@@ -61,7 +61,7 @@ router.get("/menu/:itemId", (req, res, next) => {
 
     Item.findById(id)
     .then( itemDetails => {
-        res.render("items/item-details", itemDetails);
+        res.render("items/item-details", {item: itemDetails, user: req.session.user});
     })
     .catch( err => {
         console.log("error getting item details from DB", err);
@@ -70,12 +70,12 @@ router.get("/menu/:itemId", (req, res, next) => {
 });
 
 // CREATE: Display form
-router.get("/items/create", isLoggedIn, isAdmin, (req, res, next) => {
+router.get("/menu/create", isLoggedIn, isAdmin, (req, res, next) => {
     res.render("items/item-create");    
 });
 
 // CREATE: Process form
-router.post("/items/create", isLoggedIn, isAdmin, fileUploader.single('image_url'), (req, res, next) => {
+router.post("/menu/create", isLoggedIn, isAdmin, fileUploader.single('image_url'), (req, res, next) => {
     
     
     

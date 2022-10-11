@@ -9,12 +9,12 @@
             Price: € {{this.price}}<br />
             {{!-- Category: {{this.category}} <br /> --}}
             <a href="/menu/{{this._id}}">More details</a> |
-            {{#if user.isAdmin}}
+            
                 <a href="/menu/{{this._id}}/edit">Edit</a> |
                 <form action="/menu/{{this._id}}/delete" method="POST">
                     <button>Delete</button>
                 </form>
-            {{/if}}
+         
         </p>
 
     </section>

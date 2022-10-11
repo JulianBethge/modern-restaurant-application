@@ -1,31 +1,40 @@
 <section>
-    <h2>{{title}}</h2>
+    <h2>{{item.title}}</h2>
+    
 
     <p>
-        <strong>Price: </strong> {{price}} <br />
+        <strong>Price: </strong> {{item.price}} <br />
     </p>
     <p>
         <strong>Description:</strong>
-        {{description}}
+        {{item.description}}
     </p>
     <p>
         <strong>Category:</strong>
-        {{category}}
+        {{item.category}}
     </p>
     <p>
         <strong>MenuNumber:</strong>
-        {{menuNumber}}
+        {{item.menuNumber}}
     </p>
     <p>
-        <img class="card-img-details" src="{{image_url}}" alt="">
+        <img class="card-img-details" src="{{item.image_url}}" alt="">
         
     </p>
 
+    {{#if user.isAdmin}}
     <p>
-        <form action="/menu/{{_id}}/delete" method="POST">
+        <form action="/menu/{{item._id}}/delete" method="POST">
             <button>Delete</button>
         </form>
     </p>
+    {{/if}}
 
 </section>
-<a href="/menu/{{this._id}}/edit">Edit Item</a> | <a href="/menu">Back</a>
+
+
+
+{{#if user.isAdmin}}
+<a href="/menu/{{item._id}}/edit">Edit Item</a> | 
+{{/if}}
+<a href="/menu">Back</a>
