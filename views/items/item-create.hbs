@@ -1,12 +1,12 @@
 <form action="/items/create" method="POST" enctype="multipart/form-data">
    <label> Title:
-      <input type="text" name="title">
+      <input type="text" name="title" required>
    </label>
    <label> Price:
-      <input type="float" name="price">
+      <input type="float" name="price" required>
    </label>
    <label> Category:
-      <select name="category">
+      <select name="category" required>
         <option value="starter">Starter</option>
         <option value="main">Main</option>
         <option value="dessert">Dessert</option>
@@ -14,13 +14,13 @@
       </select>
    </label>
    <label> Description:
-      <textarea name="description" cols="30" rows="4"> </textarea>
+      <textarea name="description" cols="30" rows="4" required> </textarea>
    </label>
    <label> Image:
-      <input type="file" name="image_url" accept="image/png, image/jpeg" />
+      <input type="file" name="image_url" accept="image/png, image/jpeg" required/>
    </label>
    <label> MenuNumber:
-      <input type="number" name="menuNumber">
+      <input type="number" name="menuNumber" required>
    </label>
 
    <button type="submit">Submit</button>
