@@ -1,6 +1,6 @@
 <h2>Edit the item: {{title}}</h2>
 
-<form action="/menu/{{_id}}/edit" method="POST">
+<form action="/menu/{{_id}}/edit" method="POST" enctype="multipart/form-data">
    <label> Title:
       <input type="text" name="title" value="{{title}}">
    </label>
@@ -9,10 +9,10 @@
    </label>
    <label> Category:
       <select name="category">
-        <option value="starter">Starter</option>
-        <option value="main">Main</option>
-        <option value="dessert">Dessert</option>
-        <option value="drink">Drink</option>
+         <option value="starter">Starter</option>
+         <option value="main">Main</option>
+         <option value="dessert">Dessert</option>
+         <option value="drink">Drink</option>
       </select>
    </label>
    <label> Description:
@@ -21,7 +21,7 @@
       </textarea>
    </label>
    <label> Image:
-      <input type="file" name="image_url" accept="image/png, image/jpeg" />
+      <input type="file" name="image_url" />
    </label>
    <label> MenuNumber:
       <input type="number" name="menuNumber" value="{{menuNumber}}">
@@ -29,3 +29,8 @@
 
    <button type="submit">Submit</button>
 </form>
+
+<p>
+   <img class="card-img-details" src="{{image_url}}" alt="">
+
+</p>
