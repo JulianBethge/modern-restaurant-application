@@ -1,0 +1,31 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{appTitle}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+
+    <a href="/">Home</a> |
+    <a href="/menu">Menu</a> |
+    <a href="/auth/login">Login</a> |
+    <a href="/auth/signup">Sign up</a> |
+      {{#if user.isAdmin}}
+        <a href="/items/create">Create Item</a> |
+      {{/if}}
+      
+      {{#if user}}
+     
+        <a href="/auth/logout">Logout</a>
+      {{/if}}
+
+    {{{body}}}
+
+    <script src="/js/script.js"></script>
+  </body>
+
+</html>
