@@ -18,7 +18,7 @@ const router = require("express").Router();
 router.get("/menu", (req, res, next) => {
 
     let {startersArr, mainsArr, desertsArr, drinksArr} = [];    
-
+    
 
     Item.find()
     .then( itemsFromDB => {
