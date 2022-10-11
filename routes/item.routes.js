@@ -70,12 +70,12 @@ router.get("/menu/:itemId", (req, res, next) => {
 });
 
 // CREATE: Display form
-router.get("/menu/create", isLoggedIn, isAdmin, (req, res, next) => {
+router.get("/create", isLoggedIn, isAdmin, (req, res, next) => {
     res.render("items/item-create");    
 });
 
 // CREATE: Process form
-router.post("/menu/create", isLoggedIn, isAdmin, fileUploader.single('image_url'), (req, res, next) => {
+router.post("/create", isLoggedIn, isAdmin, fileUploader.single('image_url'), (req, res, next) => {
     
     
     
