@@ -1,6 +1,10 @@
 // Import models
 const Item = require("../models/Item.model");
 
+
+// ********* require fileUploader in order to use it ********
+const fileUploader = require('../config/cloudinary.config');
+
 // Import middleware
 const isLoggedIn = require("../middleware/isLoggedIn");
 const isAdmin = require("../middleware/isAdmin");
@@ -42,9 +46,9 @@ router.get("/menu/create", (req, res, next) => {
 });
 
 // CREATE: Process form
-router.post("/items/create", (req, res, next) => {
+router.post("/items/create", fileUploader.single('image_url'), (req, res, next) => {
     
-    console.log("File data.." + req.body.image_url);
+    
     
 
     const newItem = {
@@ -52,11 +56,11 @@ router.post("/items/create", (req, res, next) => {
         price: req.body.price,
         category: req.body.category,
         description: req.body.description,
-        image_url: "../images/"+ req.body.image_url,
+        image_url: req.file.path,
         menuNumber: req.body.menuNumber,
     }
 
-    console.log("Here the new Item.." + newItem);
+    
 
     Item.create(newItem)
     .then( newItem => {
