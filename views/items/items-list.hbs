@@ -1,6 +1,65 @@
 <h1>Menu</h1>
+<h2>Starters:</h2>
+{{#each startersArr}}
 
-{{#each items}}
+
+    <section>
+        <h2>{{this.title}}</h2>
+        <p>
+            Price: € {{this.price}}<br />
+            {{!-- Category: {{this.category}} <br /> --}}
+            <a href="/menu/{{this._id}}">More details</a> |
+            <a href="/menu/{{this._id}}/edit">Edit</a> |
+            <form action="/menu/{{this._id}}/delete" method="POST">
+                <button>Delete</button>
+            </form>
+        </p>
+
+    </section>
+{{/each}}
+
+<h2>Main Dishes:</h2>
+{{#each mainsArr}}
+
+
+    <section>
+        <h2>{{this.title}}</h2>
+        <p>
+            Price: € {{this.price}}<br />
+            {{!-- Category: {{this.category}} <br /> --}}
+            <a href="/menu/{{this._id}}">More details</a> |
+            <a href="/menu/{{this._id}}/edit">Edit</a> |
+            <form action="/menu/{{this._id}}/delete" method="POST">
+                <button>Delete</button>
+            </form>
+        </p>
+
+    </section>
+{{/each}}
+
+<h2>Desserts:</h2>
+{{#each desertsArr}}
+
+
+    <section>
+        <h2>{{this.title}}</h2>
+        <p>
+            Price: € {{this.price}}<br />
+            {{!-- Category: {{this.category}} <br /> --}}
+            <a href="/menu/{{this._id}}">More details</a> |
+            <a href="/menu/{{this._id}}/edit">Edit</a> |
+            <form action="/menu/{{this._id}}/delete" method="POST">
+                <button>Delete</button>
+            </form>
+        </p>
+
+    </section>
+{{/each}}
+
+<h2>Drinks:</h2>
+{{#each drinksArr}}
+
+
     <section>
         <h2>{{this.title}}</h2>
         <p>

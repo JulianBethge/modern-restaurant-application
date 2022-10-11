@@ -15,10 +15,42 @@ const router = require("express").Router();
 // 👇 Handling routes 👇
 
 // READ: List all items
-router.get("/menu", (req, rest, next) => {
+router.get("/menu", (req, res, next) => {
+
+    let {startersArr, mainsArr, desertsArr, drinksArr} = [];
+
+
     Item.find()
     .then( itemsFromDB => {
-        rest.render("items/items-list", {items: itemsFromDB})
+
+        startersArr = itemsFromDB.filter( (v) => {
+            if( v.category == "starter"){
+                return v;
+            }
+        })
+
+        mainsArr = itemsFromDB.filter( (v) => {
+            if( v.category == "main"){
+                return v;
+            }
+        })
+
+        desertsArr = itemsFromDB.filter( (v) => {
+            if( v.category == "dessert"){
+                return v;
+            }
+        })
+
+        drinksArr = itemsFromDB.filter( (v) => {
+            if( v.category == "drink"){
+                return v;
+            }
+        })
+
+
+        
+
+        res.render("items/items-list", {startersArr, mainsArr, desertsArr, drinksArr})
     })
     .catch( err => {
         console.log("error getting items from DB", err);
