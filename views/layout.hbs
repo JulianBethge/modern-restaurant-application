@@ -12,16 +12,18 @@
 
     <a href="/">Home</a> |
     <a href="/menu">Menu</a> |
-    <a href="/auth/login">Login</a> |
-    <a href="/auth/signup">Sign up</a> |
-      {{#if user.isAdmin}}
-        <a href="/menu/create">Create Item</a> |
-      {{/if}}
-      
-      {{#if user}}
-     
-        <a href="/auth/logout">Logout</a>
-      {{/if}}
+    {{#unless user}}
+      <a href="/auth/login">Login</a> |
+      <a href="/auth/signup">Sign up</a> |
+    {{/unless}}
+
+    {{#if user.isAdmin}}
+      <a href="/menu/create">Create Item</a> |
+    {{/if}}
+    
+    {{#if user}}
+      <a href="/auth/logout">Logout</a>
+    {{/if}}
 
     {{{body}}}
 
