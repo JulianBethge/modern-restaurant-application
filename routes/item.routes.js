@@ -64,7 +64,7 @@ router.get("/menu/:itemId", (req, res, next) => {
         res.render("items/item-details", {item: itemDetails, user: req.session.user});
     })
     .catch( err => {
-        console.log("error getting item details from DB", err);
+        console.log("Read: Error getting item details from DB", err);
         next();
     })
 });
@@ -107,7 +107,7 @@ router.get("/menu/:itemId/edit", isLoggedIn, isAdmin, (req, res, next) => {
         res.render("items/item-edit", itemDetails);
     })
     .catch( err => {
-        console.log("Error getting item details from DB...", err);
+        console.log("Update: Error getting item details from DB...", err);
         next();
     })
 })
