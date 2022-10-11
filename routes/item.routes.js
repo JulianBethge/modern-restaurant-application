@@ -46,7 +46,7 @@ router.get("/menu/create", (req, res, next) => {
 });
 
 // CREATE: Process form
-router.post("/items/create", fileUploader.single('image_url'), (req, res, next) => {
+router.post("/items/create", isAdmin, fileUploader.single('image_url'), (req, res, next) => {
     
     
     
@@ -84,7 +84,7 @@ router.get("/menu/:itemId/edit", isAdmin, (req, res, next) => {
 })
 
 // UPDATE: Process form
-router.post("/menu/:itemId/edit", isAdmin, (req, res, next) => {
+router.post("/menu/:itemId/edit", isAdmin, fileUploader.single('image_url'), (req, res, next) => {
     const itemId = req.params.itemId;
 
     const newDetails = {
@@ -92,7 +92,7 @@ router.post("/menu/:itemId/edit", isAdmin, (req, res, next) => {
         price: req.body.price,
         category: req.body.category,
         description: req.body.description,
-        image_url: "../images/"+ req.body.image_url,
+        image_url: req.file.path,
         menuNumber: req.body.menuNumber,
     }
 
