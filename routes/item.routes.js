@@ -70,7 +70,7 @@ router.get("/menu/:itemId", (req, res, next) => {
 });
 
 // CREATE: Display form
-router.get("/menu/create", isLoggedIn, isAdmin, (req, res, next) => {
+router.get("/items/create", isLoggedIn, isAdmin, (req, res, next) => {
     res.render("items/item-create");    
 });
 
@@ -114,16 +114,19 @@ router.get("/menu/:itemId/edit", isLoggedIn, isAdmin, (req, res, next) => {
 
 // UPDATE: Process form
 router.post("/menu/:itemId/edit", isLoggedIn, isAdmin, fileUploader.single('image_url'), (req, res, next) => {
+   
     const itemId = req.params.itemId;
+    
 
     const newDetails = {
         title: req.body.title,
         price: req.body.price,
         category: req.body.category,
         description: req.body.description,
-        image_url: req.file.path,
+        image_url: req.file?.path,
         menuNumber: req.body.menuNumber,
     }
+
 
     Item.findByIdAndUpdate(itemId, newDetails)
     .then(() => {
