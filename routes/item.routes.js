@@ -46,7 +46,7 @@ router.get("/menu/create", (req, res, next) => {
 });
 
 // CREATE: Process form
-router.post("/items/create", isAdmin, fileUploader.single('image_url'), (req, res, next) => {
+router.post("/items/create", isLoggedIn, isAdmin, fileUploader.single('image_url'), (req, res, next) => {
     
     
     
@@ -72,7 +72,7 @@ router.post("/items/create", isAdmin, fileUploader.single('image_url'), (req, re
 });
 
 // UPDATE: Display form
-router.get("/menu/:itemId/edit", isAdmin, (req, res, next) => {
+router.get("/menu/:itemId/edit", isLoggedIn, isAdmin, (req, res, next) => {
     Item.findById(req.params.itemId)
     .then( (itemDetails) => {
         res.render("items/item-edit", itemDetails);
@@ -84,7 +84,7 @@ router.get("/menu/:itemId/edit", isAdmin, (req, res, next) => {
 })
 
 // UPDATE: Process form
-router.post("/menu/:itemId/edit", isAdmin, fileUploader.single('image_url'), (req, res, next) => {
+router.post("/menu/:itemId/edit", isLoggedIn, isAdmin, fileUploader.single('image_url'), (req, res, next) => {
     const itemId = req.params.itemId;
 
     const newDetails = {
@@ -107,7 +107,7 @@ router.post("/menu/:itemId/edit", isAdmin, fileUploader.single('image_url'), (re
 })
 
 // DELETE
-router.post("/menu/:itemId/delete", isAdmin, (req, res, next) => {
+router.post("/menu/:itemId/delete", isLoggedIn, isAdmin, (req, res, next) => {
     Item.findByIdAndDelete(req.params.itemId)
       .then(() => {
         res.redirect("/menu");
