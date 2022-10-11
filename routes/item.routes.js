@@ -100,8 +100,6 @@ router.post("/menu/:itemId/edit", isAdmin, (req, res, next) => {
         console.log("Error updating item...", err);
         next(err);
     });
-
-
 })
 
 // DELETE
