@@ -2,13 +2,13 @@
 
 <form action="/menu/{{_id}}/edit" method="POST" enctype="multipart/form-data">
    <label> Title:
-      <input type="text" name="title" value="{{title}}">
+      <input type="text" name="title" value="{{title}}" required>
    </label>
    <label> Price:
-      <input type="float" name="price" value="{{price}}">
+      <input type="float" name="price" value="{{price}}" required>
    </label>
    <label> Category:
-      <select name="category">
+      <select name="category" required>
          <option value="starter">Starter</option>
          <option value="main">Main</option>
          <option value="dessert">Dessert</option>
@@ -16,15 +16,15 @@
       </select>
    </label>
    <label> Description:
-      <textarea name="description" cols="30" rows="4">
+      <textarea name="description" cols="30" rows="4" required>
         {{description}}
       </textarea>
    </label>
    <label> Image:
-      <input type="file" name="image_url" />
+      <input type="file" name="image_url" required />
    </label>
    <label> MenuNumber:
-      <input type="number" name="menuNumber" value="{{menuNumber}}">
+      <input type="number" name="menuNumber" value="{{menuNumber}}" required>
    </label>
 
    <button type="submit">Submit</button>
