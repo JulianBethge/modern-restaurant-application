@@ -71,7 +71,7 @@ router.get("/menu/:itemId", (req, res, next) => {
 
 // CREATE: Display form
 router.get("/create", isLoggedIn, isAdmin, (req, res, next) => {
-    res.render("items/item-create");    
+    res.render("items/item-create", {user: req.session.user});    
 });
 
 // CREATE: Process form
@@ -104,7 +104,8 @@ router.post("/create", isLoggedIn, isAdmin, fileUploader.single('image_url'), (r
 router.get("/menu/:itemId/edit", isLoggedIn, isAdmin, (req, res, next) => {
     Item.findById(req.params.itemId)
     .then( (itemDetails) => {
-        res.render("items/item-edit", itemDetails);
+        res.render("items/item-edit", {item: itemDetails, user: req.session.user});
+
     })
     .catch( err => {
         console.log("Update: Error getting item details from DB...", err);

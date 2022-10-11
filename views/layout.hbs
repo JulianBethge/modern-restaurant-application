@@ -1,31 +1,43 @@
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{appTitle}}</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>{{appTitle}}</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
 
-  <body>
-
+<body>
+  <div>
+    {{#if user}}
+    <h2>Status: Logged in as {{user.email}}</h2>
+    {{/if}}
+    {{#unless user}}
+      Status: Not logged in
+    {{/unless}}
+  </div>
+  <nav>
     <a href="/">Home</a> |
     <a href="/menu">Menu</a> |
+
+    {{#unless user}}
     <a href="/auth/login">Login</a> |
     <a href="/auth/signup">Sign up</a> |
-      {{#if user.isAdmin}}
-        <a href="/create">Create Item</a> |
-      {{/if}}
-      
-      {{#if user}}
-     
-        <a href="/auth/logout">Logout</a>
-      {{/if}}
+    {{/unless}}
+    
+    {{#if user.isAdmin}}
+    <a href="/create">Create Item</a> |
+    {{/if}}
 
-    {{{body}}}
+    {{#if user}}
+    <a href="/auth/logout">Logout</a>
+    {{/if}}
+  </nav>
 
-    <script src="/js/script.js"></script>
-  </body>
+  {{{body}}}
+
+  <script src="/js/script.js"></script>
+</body>
 
 </html>

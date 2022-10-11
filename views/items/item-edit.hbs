@@ -1,11 +1,11 @@
-<h2>Edit the item: {{title}}</h2>
+<h2>Edit the item: {{item.title}}</h2>
 
 <form action="/menu/{{_id}}/edit" method="POST" enctype="multipart/form-data">
    <label> Title:
-      <input type="text" name="title" value="{{title}}" required>
+      <input type="text" name="title" value="{{item.title}}" required>
    </label>
    <label> Price:
-      <input type="float" name="price" value="{{price}}" required>
+      <input type="float" name="price" value="{{item.price}}" required>
    </label>
    <label> Category:
       <select name="category" required>
@@ -16,21 +16,25 @@
       </select>
    </label>
    <label> Description:
-      <textarea name="description" cols="30" rows="4" required>
-        {{description}}
+      <textarea name="description" cols="30" rows="4">
+        {{item.description}}
       </textarea>
    </label>
+
    <label> Image:
-      <input type="file" name="image_url" required />
+      <input type="file" name="image_url"/>
    </label>
-   <label> MenuNumber:
-      <input type="number" name="menuNumber" value="{{menuNumber}}">
-   </label>
+
+   {{!-- <label> MenuNumber:
+      <input type="number" name="menuNumber" value="{{item.menuNumber}}">
+   </label> --}}
+   {{#if item.image_url}}
+   <p>
+   <img class="card-img-details" src="{{item.image_url}}" alt="">
+   </p>
+   {{/if}}
+
 
    <button type="submit">Submit</button>
 </form>
 
-<p>
-   <img class="card-img-details" src="{{image_url}}" alt="">
-
-</p>
