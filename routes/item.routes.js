@@ -47,10 +47,7 @@ router.get("/menu", (req, res, next) => {
             }
         })
 
-
-        
-
-        res.render("items/items-list", {startersArr, mainsArr, desertsArr, drinksArr})
+        res.render("items/items-list", {startersArr, mainsArr, desertsArr, drinksArr, user: req.session.user} )
     })
     .catch( err => {
         console.log("error getting items from DB", err);
