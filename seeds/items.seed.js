@@ -10,7 +10,7 @@ const items = [
     price: 12.5,
     category: "main",
     description: "lorem ipsum...",
-    image_url: "../images/pizza_salami.jpg",
+    image_url: "/images/pizza_salami.jpg",
     menuNumber: 201,
   },
   {
@@ -18,7 +18,7 @@ const items = [
     price: 13.5,
     category: "main",
     description: "lorem ipsum...",
-    image_url: "../images/pizza_funghi.jpg",
+    image_url: "/images/pizza_funghi.jpg",
     menuNumber: 202,
   },
   {
@@ -26,7 +26,7 @@ const items = [
     price: 11.5,
     category: "main",
     description: "lorem ipsum...",
-    image_url: "../images/pizza_hawai.jpg",
+    image_url: "/images/pizza_hawai.jpg",
     menuNumber: 203,
   },
   {
@@ -34,7 +34,7 @@ const items = [
     price: 13.5,
     category: "main",
     description: "lorem ipsum...",
-    image_url: "../images/pizza_quattro_formaggi.jpg",
+    image_url: "/images/pizza_quattro_formaggi.jpg",
     menuNumber: 204,
   },
   {
@@ -42,7 +42,7 @@ const items = [
     price: 10.50,
     category: "main",
     description: "lorem ipsum...",
-    image_url: "../images/pizza_margarita.jpg",
+    image_url: "/images/pizza_margarita.jpg",
     menuNumber: 205
 },
 {
@@ -50,7 +50,7 @@ const items = [
   price: 5.50,
   category: "starter",
   description: "lorem ipsum...",
-  image_url: "../images/garlic_pizza_bread.jpg",
+  image_url: "/images/garlic_pizza_bread.jpg",
   menuNumber: 1
 },
 {
@@ -58,7 +58,7 @@ const items = [
   price: 6.50,
   category: "starter",
   description: "lorem ipsum...",
-  image_url: "../images/cheesy_pizza_bread.jpg",
+  image_url: "/images/cheesy_pizza_bread.jpg",
   menuNumber: 2
 },
 {
@@ -66,7 +66,7 @@ const items = [
   price: 6.00,
   category: "starter",
   description: "lorem ipsum...",
-  image_url: "../images/garlic_pizza_bread.jpg",
+  image_url: "/images/garlic_pizza_bread.jpg",
   menuNumber: 3
 },
 {
@@ -74,7 +74,7 @@ const items = [
   price: 6.00,
   category: "dessert",
   description: "lorem ipsum...",
-  image_url: "../images/new_york_cheescake.jpg",
+  image_url: "/images/new_york_cheescake.jpg",
   menuNumber: 3
 },
 {
@@ -82,7 +82,7 @@ const items = [
   price: 6.00,
   category: "dessert",
   description: "lorem ipsum...",
-  image_url: "../images/tiramisu.jpg",
+  image_url: "/images/tiramisu.jpg",
   menuNumber: 3
 },
 {
@@ -90,7 +90,7 @@ const items = [
   price: 2.50,
   category: "drink",
   description: "lorem ipsum...",
-  image_url: "../images/still_water.jpg",
+  image_url: "/images/still_water.jpg",
   menuNumber: 100
 },
 {
@@ -98,7 +98,7 @@ const items = [
   price: 2.50,
   category: "drink",
   description: "lorem ipsum...",
-  image_url: "../images/sparkling_water.jpg",
+  image_url: "/images/sparkling_water.jpg",
   menuNumber: 101
 },
 {
@@ -106,7 +106,7 @@ const items = [
   price: 3.50,
   category: "drink",
   description: "lorem ipsum...",
-  image_url: "../images/beer.jpg",
+  image_url: "/images/beer.jpg",
   menuNumber: 102
 }
 
