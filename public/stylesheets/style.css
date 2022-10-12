@@ -7,13 +7,22 @@ a {
   color: #00b7ff;
 }
 
-h1 {
-  color: 15px;
+.card-img-details {
+  width: 25rem;
+  height: 20rem;
+  object-fit: cover;
 }
 
-
-.card-img-details {
-  width: 15rem;
-  height: 15rem;
+.card-img-top {
+  width: 100%;
+  height: 20vw;
   object-fit: cover;
+}
+
+.gap-m {
+  gap: 5rem;
+}
+
+.gap-s {
+  gap: 1rem;
 }

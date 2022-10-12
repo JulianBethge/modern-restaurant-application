@@ -13,6 +13,8 @@ const express = require("express");
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
 
+const path = require('path');
+
 const app = express();
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
@@ -22,6 +24,10 @@ const capitalized = require("./utils/capitalized");
 const projectName = "modern-restaurant-application";
 
 app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
+
+// Register the location for handlebars partials here:
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
+
 
 // 👇 Start handling routes here
 

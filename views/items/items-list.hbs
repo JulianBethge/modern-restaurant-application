@@ -1,116 +1,88 @@
 <h1>Menu</h1>
-<h2>Starters:</h2>
-{{#if user.isAdmin}}
-{{#each startersArr}}
-<section>
-    <h3>{{this.title}}</h3>
-    <p>
-        Price: € {{this.price}}<br />
-        {{!-- Category: {{this.category}} <br /> --}}
-        <a href="/menu/{{this._id}}">More details</a> |
+<h2>Starters</h2>
+<div class="d-flex flex-row gap-m flex-wrap">
+    {{#if user.isAdmin}}
+    {{#each startersArr}}
 
-        <a href="/menu/{{this._id}}/edit">Edit</a> |
-    <form action="/menu/{{this._id}}/delete" method="POST">
-        <button class="btn btn-danger">Delete</button>
-    </form>
-    </p>
-</section>
-{{/each}}
-{{else}}
-{{#each startersArr}}
-<section>
-    <h3>{{this.title}}</h3>
-    <p>
-        Price: € {{this.price}}<br />
-        <a href="/menu/{{this._id}}">More details</a>
+    {{> itemadmincard}}
 
-    </p>
-</section>
-{{/each}}
-{{/if}}
+    {{/each}}
+    {{else}}
+    {{#each startersArr}}
+    <section>
+        <h3>{{this.title}}</h3>
+        <p>
+            Price: € {{this.price}}<br />
+            <a href="/menu/{{this._id}}">More details</a>
 
-<h2>Main Dishes:</h2>
-{{#if user.isAdmin}}
-{{#each mainsArr}}
-<section>
-    <h3>{{this.title}}</h3>
-    <p>
-        Price: € {{this.price}}<br />
-        <a href="/menu/{{this._id}}">More details</a> |
+        </p>
+    </section>
+    {{/each}}
+    {{/if}}
+</div>
 
-        <a href="/menu/{{this._id}}/edit">Edit</a> |
-    <form action="/menu/{{this._id}}/delete" method="POST">
-        <button class="btn btn-danger">Delete</button>
-    </form>
-    </p>
-</section>
-{{/each}}
-{{else}}
-{{#each mainsArr}}
-<section>
-    <h3>{{this.title}}</h3>
-    <p>
-        Price: € {{this.price}}<br />
-        <a href="/menu/{{this._id}}">More details</a>
+<h2>Main Dishes</h2>
+<div class="d-flex flex-row gap-m flex-wrap">
+    {{#if user.isAdmin}}
+    {{#each mainsArr}}
 
-    </p>
-</section>
-{{/each}}
-{{/if}}
+    {{> itemadmincard}}
 
+    {{/each}}
+    {{else}}
+    {{#each mainsArr}}
+    <section>
+        <h3>{{this.title}}</h3>
+        <p>
+            Price: € {{this.price}}<br />
+            <a href="/menu/{{this._id}}">More details</a>
 
-<h2>Desserts:</h2>
-{{#if user.isAdmin}}
-{{#each desertsArr}}
-<section>
-    <h3>{{this.title}}</h3>
-    <p>
-        Price: € {{this.price}}<br />
-        <a href="/menu/{{this._id}}">More details</a> |
+        </p>
+    </section>
+    {{/each}}
+    {{/if}}
 
-        <a href="/menu/{{this._id}}/edit">Edit</a> |
-    <form action="/menu/{{this._id}}/delete" method="POST">
-        <button class="btn btn-danger">Delete</button>
-    </form>
-    </p>
-</section>
-{{/each}}
-{{else}}
-{{#each desertsArr}}
-<section>
-    <h3>{{this.title}}</h3>
-    <p>
-        <a href="/menu/{{this._id}}">More details</a>
+</div>
+<h2>Desserts</h2>
+<div class="d-flex flex-row gap-m flex-wrap">
+    {{#if user.isAdmin}}
+    {{#each desertsArr}}
 
-    </p>
-</section>
-{{/each}}
-{{/if}}
+    {{> itemadmincard}}
 
-<h2>Drinks:</h2>
-{{#if user.isAdmin}}
-{{#each drinksArr}}
-<section>
-    <h3>{{this.title}}</h3>
-    <p>
-        Price: € {{this.price}}<br />
-        <a href="/menu/{{this._id}}">More details</a> |
-        <a href="/menu/{{this._id}}/edit">Edit</a> |
-    <form action="/menu/{{this._id}}/delete" method="POST">
-        <button class="btn btn-danger">Delete</button>
-    </form>
-    </p>
-</section>
-{{/each}}
-{{else}}
-{{#each drinksArr}}
-<section>
-    <h3>{{this.title}}</h3>
-    <p>
-        Price: € {{this.price}}<br />
-        <a href="/menu/{{this._id}}">More details</a>
+    {{/each}}
+    {{else}}
+    {{#each desertsArr}}
+    <section>
+        <h3>{{this.title}}</h3>
+        <p>
+            <a href="/menu/{{this._id}}">More details</a>
 
-    </p>
-</section>
-{{/each}}
-{{/if}}
+        </p>
+    </section>
+    {{/each}}
+    {{/if}}
+
+</div>
+
+<h2>Drinks</h2>
+<div class="d-flex flex-row gap-m flex-wrap">
+    {{#if user.isAdmin}}
+    {{#each drinksArr}}
+
+    {{> itemadmincard}}
+
+    {{/each}}
+    {{else}}
+    {{#each drinksArr}}
+    <section>
+        <h3>{{this.title}}</h3>
+        <p>
+            Price: € {{this.price}}<br />
+            <a href="/menu/{{this._id}}">More details</a>
+
+        </p>
+    </section>
+    {{/each}}
+    {{/if}}
+</div>
