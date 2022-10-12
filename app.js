@@ -23,7 +23,7 @@ require("./config")(app);
 const capitalized = require("./utils/capitalized");
 const projectName = "modern-restaurant-application";
 
-app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
+app.locals.appTitle = `${capitalized(projectName)}`;
 
 // Register the location for handlebars partials here:
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
