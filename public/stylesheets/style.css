@@ -26,3 +26,7 @@ a {
 .gap-s {
   gap: 1rem;
 }
+
+.category {
+  margin-bottom: 5rem;
+}

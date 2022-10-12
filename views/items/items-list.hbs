@@ -1,88 +1,54 @@
 <h1>Menu</h1>
 <h2>Starters</h2>
-<div class="d-flex flex-row gap-m flex-wrap">
+<div class="d-flex flex-row gap-m flex-wrap category">
     {{#if user.isAdmin}}
     {{#each startersArr}}
-
     {{> itemadmincard}}
-
     {{/each}}
     {{else}}
     {{#each startersArr}}
-    <section>
-        <h3>{{this.title}}</h3>
-        <p>
-            Price: € {{this.price}}<br />
-            <a href="/menu/{{this._id}}">More details</a>
-
-        </p>
-    </section>
+    {{> itemusercard}}
     {{/each}}
+    
     {{/if}}
 </div>
 
 <h2>Main Dishes</h2>
-<div class="d-flex flex-row gap-m flex-wrap">
+<div class="d-flex flex-row gap-m flex-wrap category">
     {{#if user.isAdmin}}
     {{#each mainsArr}}
-
     {{> itemadmincard}}
-
     {{/each}}
     {{else}}
     {{#each mainsArr}}
-    <section>
-        <h3>{{this.title}}</h3>
-        <p>
-            Price: € {{this.price}}<br />
-            <a href="/menu/{{this._id}}">More details</a>
-
-        </p>
-    </section>
+    {{> itemusercard}}
     {{/each}}
     {{/if}}
 
 </div>
 <h2>Desserts</h2>
-<div class="d-flex flex-row gap-m flex-wrap">
+<div class="d-flex flex-row gap-m flex-wrap category">
     {{#if user.isAdmin}}
     {{#each desertsArr}}
-
     {{> itemadmincard}}
-
     {{/each}}
     {{else}}
     {{#each desertsArr}}
-    <section>
-        <h3>{{this.title}}</h3>
-        <p>
-            <a href="/menu/{{this._id}}">More details</a>
-
-        </p>
-    </section>
+    {{> itemusercard}}
     {{/each}}
     {{/if}}
 
 </div>
 
 <h2>Drinks</h2>
-<div class="d-flex flex-row gap-m flex-wrap">
+<div class="d-flex flex-row gap-m flex-wrap category">
     {{#if user.isAdmin}}
     {{#each drinksArr}}
-
     {{> itemadmincard}}
-
     {{/each}}
     {{else}}
     {{#each drinksArr}}
-    <section>
-        <h3>{{this.title}}</h3>
-        <p>
-            Price: € {{this.price}}<br />
-            <a href="/menu/{{this._id}}">More details</a>
-
-        </p>
-    </section>
+    {{> itemusercard}}
     {{/each}}
     {{/if}}
 </div>
