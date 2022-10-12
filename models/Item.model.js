@@ -19,7 +19,7 @@ const itemSchema = new Schema(
         image_url: String,
         menuNumber: {
             type: Number,
-            unique: true
+            unique: false
         }
     },
     {
