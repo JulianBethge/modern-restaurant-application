@@ -3,7 +3,7 @@
 {{#if user.isAdmin}}
 {{#each startersArr}}
 <section>
-    <h2>{{this.title}}</h2>
+    <h3>{{this.title}}</h3>
     <p>
         Price: € {{this.price}}<br />
         {{!-- Category: {{this.category}} <br /> --}}
@@ -11,7 +11,7 @@
 
         <a href="/menu/{{this._id}}/edit">Edit</a> |
     <form action="/menu/{{this._id}}/delete" method="POST">
-        <button>Delete</button>
+        <button class="btn btn-danger">Delete</button>
     </form>
     </p>
 </section>
@@ -19,7 +19,7 @@
 {{else}}
 {{#each startersArr}}
 <section>
-    <h2>{{this.title}}</h2>
+    <h3>{{this.title}}</h3>
     <p>
         Price: € {{this.price}}<br />
         <a href="/menu/{{this._id}}">More details</a>
@@ -33,14 +33,14 @@
 {{#if user.isAdmin}}
 {{#each mainsArr}}
 <section>
-    <h2>{{this.title}}</h2>
+    <h3>{{this.title}}</h3>
     <p>
         Price: € {{this.price}}<br />
         <a href="/menu/{{this._id}}">More details</a> |
 
         <a href="/menu/{{this._id}}/edit">Edit</a> |
     <form action="/menu/{{this._id}}/delete" method="POST">
-        <button>Delete</button>
+        <button class="btn btn-danger">Delete</button>
     </form>
     </p>
 </section>
@@ -48,7 +48,7 @@
 {{else}}
 {{#each mainsArr}}
 <section>
-    <h2>{{this.title}}</h2>
+    <h3>{{this.title}}</h3>
     <p>
         Price: € {{this.price}}<br />
         <a href="/menu/{{this._id}}">More details</a>
@@ -63,14 +63,14 @@
 {{#if user.isAdmin}}
 {{#each desertsArr}}
 <section>
-    <h2>{{this.title}}</h2>
+    <h3>{{this.title}}</h3>
     <p>
         Price: € {{this.price}}<br />
         <a href="/menu/{{this._id}}">More details</a> |
 
         <a href="/menu/{{this._id}}/edit">Edit</a> |
     <form action="/menu/{{this._id}}/delete" method="POST">
-        <button>Delete</button>
+        <button class="btn btn-danger">Delete</button>
     </form>
     </p>
 </section>
@@ -78,7 +78,7 @@
 {{else}}
 {{#each desertsArr}}
 <section>
-    <h2>{{this.title}}</h2>
+    <h3>{{this.title}}</h3>
     <p>
         <a href="/menu/{{this._id}}">More details</a>
 
@@ -91,13 +91,13 @@
 {{#if user.isAdmin}}
 {{#each drinksArr}}
 <section>
-    <h2>{{this.title}}</h2>
+    <h3>{{this.title}}</h3>
     <p>
         Price: € {{this.price}}<br />
         <a href="/menu/{{this._id}}">More details</a> |
         <a href="/menu/{{this._id}}/edit">Edit</a> |
     <form action="/menu/{{this._id}}/delete" method="POST">
-        <button>Delete</button>
+        <button class="btn btn-danger">Delete</button>
     </form>
     </p>
 </section>
@@ -105,7 +105,7 @@
 {{else}}
 {{#each drinksArr}}
 <section>
-    <h2>{{this.title}}</h2>
+    <h3>{{this.title}}</h3>
     <p>
         Price: € {{this.price}}<br />
         <a href="/menu/{{this._id}}">More details</a>
