@@ -2,17 +2,19 @@ body {
   padding: 6rem;
   min-height: 100vh;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-
 }
 
-.gradient {
-  background: #8E0E00;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #5f0a00, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #5f0a00, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+.bg-img {
+  background-image: url(/images/restaurant-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
 }
 
 .card-body {
   background: #212529;
+  
 }
 
 
@@ -50,9 +52,15 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
-
-
 #login-form, #singup-form {
   width: 25rem;
-
 }
+
+
+/* Not in use: */
+.gradient {
+  background: #8E0E00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #5f0a00, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #5f0a00, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
