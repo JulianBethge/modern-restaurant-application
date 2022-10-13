@@ -88,7 +88,7 @@ const items = [
 {
   title: "Still Water",
   price: 2.50,
-  category: "drink",
+  category: "beverages",
   description: "lorem ipsum...",
   image_url: "/images/still_water.jpg",
   menuNumber: 100
@@ -96,7 +96,7 @@ const items = [
 {
   title: "Sparkling Water",
   price: 2.50,
-  category: "drink",
+  category: "beverages",
   description: "lorem ipsum...",
   image_url: "/images/sparkling_water.jpg",
   menuNumber: 101
@@ -104,7 +104,7 @@ const items = [
 {
   title: "Beer 0.4",
   price: 3.50,
-  category: "drink",
+  category: "beverages",
   description: "lorem ipsum...",
   image_url: "/images/beer.jpg",
   menuNumber: 102

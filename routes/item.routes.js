@@ -17,7 +17,7 @@ const router = require("express").Router();
 // READ: List all items
 router.get("/menu", (req, res, next) => {
 
-    let {startersArr, mainsArr, desertsArr, drinksArr} = [];    
+    let {startersArr, mainsArr, desertsArr, beveragesArr} = [];    
     
 
     Item.find()
@@ -41,13 +41,13 @@ router.get("/menu", (req, res, next) => {
             }
         })
 
-        drinksArr = itemsFromDB.filter( (v) => {
-            if( v.category == "drink"){
+        beveragesArr = itemsFromDB.filter( (v) => {
+            if( v.category == "beverages"){
                 return v;
             }
         })
         
-        res.render("items/items-list", {startersArr, mainsArr, desertsArr, drinksArr, user: req.session.user} );
+        res.render("items/items-list", {startersArr, mainsArr, desertsArr, beveragesArr, user: req.session.user} );
     })
     .catch( err => {
         console.log("error getting items from DB", err);
@@ -117,8 +117,7 @@ router.get("/menu/:itemId/edit", isLoggedIn, isAdmin, (req, res, next) => {
 router.post("/menu/:itemId/edit", isLoggedIn, isAdmin, fileUploader.single('image_url'), (req, res, next) => {
    
     const itemId = req.params.itemId;
-    // console.log("HERE IS THE REQ"+ req.file.path);
-
+    // console.log("HERE IS THE REQ"+ req.file.path);find()
     const newDetails = {
         title: req.body.title,
         price: req.body.price,

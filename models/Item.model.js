@@ -13,7 +13,7 @@ const itemSchema = new Schema(
         },
         category: {
             type: String,
-            enum: ["starter", "main", "dessert", "drink"]
+            enum: ["starter", "main", "dessert", "beverages"]
         },
         description: String,
         image_url: String,

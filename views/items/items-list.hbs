@@ -40,14 +40,14 @@
 
 </div>
 
-<h2>Drinks</h2>
+<h2>Beveragess</h2>
 <div class="d-flex flex-row gap-m flex-wrap category">
     {{#if user.isAdmin}}
-    {{#each drinksArr}}
+    {{#each beveragesArr}}
     {{> itemadmincard}}
     {{/each}}
     {{else}}
-    {{#each drinksArr}}
+    {{#each beveragesArr}}
     {{> itemusercard}}
     {{/each}}
     {{/if}}

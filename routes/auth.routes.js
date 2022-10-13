@@ -20,7 +20,7 @@ router.get("/auth/signup", isLoggedOut, (req, res) => {
 
 router.post("/auth/signup", isLoggedOut, (req, res) => {
 
-  const { email, passwordHash } = req.body;
+  const { email, passwordHash, isAdmin } = req.body;
   
 
   if (!email) {
@@ -68,7 +68,7 @@ router.post("/auth/signup", isLoggedOut, (req, res) => {
         const newUser = {
           email: email,
           passwordHash: hashedPassword,
-          isAdmin: false,
+          isAdmin: isAdmin,
         };       
 
         return User.create(newUser);
