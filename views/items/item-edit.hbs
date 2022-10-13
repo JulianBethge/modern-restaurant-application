@@ -1,38 +1,59 @@
+
+
+<div class="w-10 h-25 container">
 <h2>Edit the item: {{item.title}}</h2>
 
-<form action="/menu/{{item._id}}/edit" method="POST" enctype="multipart/form-data" class="text-white">
-   <label> Title:
-      <input type="text" name="title" value="{{item.title}}" required>
-   </label>
-   <label> Price:
-      <input type="number" name="price" value="{{item.price}}" min="0" step="any" required>
-   </label>
-   <label> Category:
-      <select name="category" required>
+<form action="/menu/{{item._id}}/edit" method="POST" enctype="multipart/form-data" class="row g-3">
+  <div class="col-md-12">
+    <label for="validationCustom01" class="form-label">Product Name</label>
+    <input type="text" name="title" class="form-control" id="validationCustom01" value="{{item.title}}" required>    
+  </div>
+
+  <div class="col-md-12">
+    <label for="validationCustom02" class="form-label">Price</label>
+    <input type="number" name="price" value="{{item.price}}"  min="0" step="any" class="form-control" id="validationCustom02" required>    
+  </div>
+
+  <div class="col-md-12">
+    <label for="validationCustomUsername" class="form-label">Category</label>
+    <div>      
+      <select class="form-select form-select-sm" name="category" aria-label=".form-select-sm example">
+         <option selected>Open this select menu</option>
          <option value="starter">Starter</option>
          <option value="main">Main</option>
          <option value="dessert">Dessert</option>
          <option value="beverages">Beverages</option>
-      </select>
-   </label>
-   <label> Description:
-      <textarea name="description" cols="30" rows="4">
-        {{item.description}}
-      </textarea>
-   </label>
+      </select>      
+    </div>
+  </div>
 
-   <label> Image:
-      <input type="file" name="image_url"/>
-   </label>
-
+  <div class="col-md-12">
+    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3">{{item.description}}</textarea>    
+  </div>
   
-   {{#if item.image_url}}
-   <p>
-   <img class="card-img-details" src="{{item.image_url}}" alt="">
-   </p>
-   {{/if}}
 
 
-   <button type="submit" class="btn btn-success">Submit</button>
+  <div class="col-md-12">
+    <label for="formFileSm" class="form-label">Your new image</label>
+    <input class="form-control form-control-sm" type="file" id="formFileSm" name="image_url"  accept="image/png, image/jpeg" >    
+    
+  </div>  
+  
+  <div class="col-md-6">
+    <button class="btn btn-primary" type="submit">Edit</button>
+  </div>
+
+  <div class="col-md-6">
+   <img src="{{item.image_url}}" alt="..." class="img-fluid" alt="Responsive image">
+  </div> 
+   
+   
 </form>
+
+
+</div>
+
+
+
 

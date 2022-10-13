@@ -1,3 +1,5 @@
+<div class="container">
+
 <h2>LogIn</h2>
 <section>
 <form action="/auth/login" class="needs-validation" id="login-form" method="POST" novalidate >
@@ -13,7 +15,7 @@
   <label for="floatingPassword">Password</label>
 </div>
    <div>
-    <button class="btn btn-primary" type="submit">Login</button>
+    <button class="btn btn-primary mt-3" type="submit">Login</button>
   </div>
 </form>
 </section>
@@ -23,6 +25,8 @@
    {{#if errorMessage}}
       {{errorMessage}}
    {{/if}}
+</div>
+
 </div>
 
 
