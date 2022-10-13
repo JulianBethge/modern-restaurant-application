@@ -1,10 +1,10 @@
 <section class="text-white">
-    <div class="container">
+    <div class="container blur-bg">
         <h2>{{item.title}}</h2>
 
 
         <p>
-            <strong>Price: </strong> {{item.price}} <br />
+            <strong>Price: </strong>€ {{item.price}} <br />
         </p>
         <p>
             <strong>Description:</strong>
@@ -22,9 +22,9 @@
 
         {{#if user.isAdmin}}
         <div class="container-fluid d-flex flex-start">
-            <a href="/menu/{{item._id}}/edit" class="btn btn-primary mx-3">Edit</a>
+            <a href="/menu/{{item._id}}/edit" class="btn btn-outline-light mx-3 blur-bg">🔧 Edit</a>
             <form action="/menu/{{item._id}}/delete" method="POST" class="d-inline">
-                <button class="btn btn-danger mx-3">Delete</button>
+                <button class="btn btn-outline-danger mx-3 blur-bg">🗑️ Delete</button>
             </form>
         </div>
         {{/if}}
@@ -34,4 +34,4 @@
 
 
 
-<a href="/menu" class="btn btn-primary text-decoration-none">Back</a>
+<a href="/menu" class="btn btn-outline-light blur-bg">Back</a>

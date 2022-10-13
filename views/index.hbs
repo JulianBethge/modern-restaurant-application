@@ -1,6 +1,22 @@
-<h1>A Modern Restaurant Application</h1>
+<div class="container text-white blur-bg">
+    <h1 class="d-inline-block">A Modern Restaurant Application</h1>
+    <p>
+        With this application a restaurant owner can create, read, update and delete products for the food menu.
+        The visitors of the webpage can read the menu and see the details.
+    </p>
+    <h2>Get started!</h2>
+    <ul>
+        <li><a href="/menu" class="btn btn-outline-light">📖 Go to the food menu</a></li>
+        {{#unless user}}
+        <li><a href="/auth/signup" class="btn btn-outline-light">👤 Register a new demo user and become admin</a></li>
+        <li><a href="/auth/login" class="btn btn-outline-light">🔓 Login to an existing account</a></li>
+        {{/unless}}
+        {{#if user.isAdmin}}
+        <li><a href="/create" class="btn btn-outline-light">🍕 Start creating products for the menu</a></li>
+        {{/if}}
+    </ul>
+    
 
 
 
-
-
+</div>

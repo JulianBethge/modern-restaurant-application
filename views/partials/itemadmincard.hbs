@@ -10,9 +10,9 @@
             Price: € {{this.price}}<br />
             <span class="description-excerpt text-white">{{this.description}}</span>
         </p>
-        <div class="container-fluid d-flex justify-content-around">
-            <a href="/menu/{{this._id}}" class="btn btn-outline-primary">More details</a>
-            <a href="/menu/{{this._id}}/edit" class="btn btn-outline-primary">Edit</a>
+        <div class="container-fluid d-flex justify-content-between">
+            <a href="/menu/{{this._id}}" class="btn btn-outline-light">More details</a>
+            <a href="/menu/{{this._id}}/edit" class="btn btn-outline-light">Edit</a>
             <form action="/menu/{{this._id}}/delete" method="POST" class="d-inline">
                 <button class="btn btn-outline-danger">Delete</button>
             </form>

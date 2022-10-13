@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center align-items-center">
-  <div class="container">
+  <div class="container blur-bg">
 
-    <h2 class="blur-bg d-inline-block">Register a new account</h2>
+    <h2 class="d-inline-block">Register a new account</h2>
     <section>
       <form action="/auth/signup" class="needs-validation" id="singup-form" method="POST" novalidate>
         <div class="form-floating mb-3">
@@ -24,21 +24,23 @@
             <label class="form-check-label" for="flexCheckDefault">Admin (*) </label>
           </div>
           <div class="col-4">
-            <button class="btn btn-primary mt-2" type="submit">Register</button>
+            <button class="btn btn-success mt-2" type="submit">Register</button>
           </div>
       </form>
-      <div class="col-10 text-white blur-bg">
-        (*) Because it is a <strong>demo</strong> we are allowing that you can register as an admin to test the CRUD functionality. 
-        In a real world application it would not be possible of course.
+      <div class="text-white bg-danger">
+        {{#if errorMessage}}
+        <b>{{errorMessage}}</b>
+        {{/if}}
+      </div>
+      <div class="col-10 text-white">
+        (*) Because it is a <strong>demo</strong> we are allowing that you can register as an admin to test the CRUD
+        functionality.
+        In a real world application it would not be possible of course. 😉 
       </div>
     </section>
 
 
-    <div class="text-white">
-      {{#if errorMessage}}
-      {{errorMessage}}
-      {{/if}}
-    </div>
+
 
   </div>
 </div>
