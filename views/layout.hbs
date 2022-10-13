@@ -11,43 +11,46 @@
 </head>
 
 <body class="gradient">
-  <div>
-    {{#if user}}
-    <h4>Status: Logged in as {{user.email}}</h4>
-    {{/if}}
-    
-    {{#if user.isAdmin}}
-    Role: Admin
-    {{/if}}
+  <header class="d-flex flex-row justify-content-between">
+    <nav>
+      <a href="/" class="link-light text-decoration-none">Home</a> |
+      <a href="/menu" class="link-light text-decoration-none">Menu</a> |
 
-    {{#unless user.isAdmin}}
-    Role: User
-    {{/unless}}
+      {{#unless user}}
+      <a href="/auth/login" class="link-light text-decoration-none">Login</a> |
+      <a href="/auth/signup" class="link-light text-decoration-none">Sign up</a> |
+      {{/unless}}
+      
+      {{#if user.isAdmin}}
+      <a href="/create" class="link-light text-decoration-none">Create Item</a> |
+      {{/if}}
+
+      {{#if user}}
+      <a href="/auth/logout" class="link-light text-decoration-none">Logout</a>
+      {{/if}}
+    </nav>
+
+    <div>
+      {{#if user}}
+      <h6>Status: Logged in as {{user.email}}</h6>
+      {{/if}}
+      
+      {{#if user.isAdmin}}
+      <h6>Role: Admin</h6>
+      {{/if}}
+
+      {{#unless user.isAdmin}}
+      Role: User
+      {{/unless}}
 
 
-    {{#unless user}}
-      Status: Not logged in
-    {{/unless}}
-    
-  </div>
-  <br />
-  <nav>
-    <a href="/">Home</a> |
-    <a href="/menu">Menu</a> |
+      {{#unless user}}
+        Status: Not logged in
+      {{/unless}}
+      
+    </div>
 
-    {{#unless user}}
-    <a href="/auth/login">Login</a> |
-    <a href="/auth/signup">Sign up</a> |
-    {{/unless}}
-    
-    {{#if user.isAdmin}}
-    <a href="/create">Create Item</a> |
-    {{/if}}
-
-    {{#if user}}
-    <a href="/auth/logout">Logout</a>
-    {{/if}}
-  </nav>
+  </header>
 
   {{{body}}}
 

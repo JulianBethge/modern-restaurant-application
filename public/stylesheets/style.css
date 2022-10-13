@@ -11,16 +11,13 @@ body {
   background: #8E0E00;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
 }
 
 .card-body {
   background: #ffbb007a;
   background: -webkit-linear-gradient(to right, #ffbb007a, #ffd000e3);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffbb007a, #ffd000e3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: linear-gradient(to right, #ffbb007a, #ffd000e3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
-
 
 
 h1,h2,h3,h4,h6{
@@ -28,8 +25,8 @@ h1,h2,h3,h4,h6{
 }
 
 
-a {
-  color: #aedff3;
+.nav-link {
+  text-decoration: none;
 }
 
 .card-img-details {
