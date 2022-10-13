@@ -1,37 +1,37 @@
 <section class="text-white">
-    <h2>{{item.title}}</h2>
-    
+    <div class="container">
+        <h2>{{item.title}}</h2>
 
-    <p>
-        <strong>Price: </strong> {{item.price}} <br />
-    </p>
-    <p>
-        <strong>Description:</strong>
-        {{item.description}}
-    </p>
-    <p>
-        <strong>Category:</strong>
-        {{item.category}}
-    </p>
-   
-    <p>
-        <img class="card-img-details" src="{{item.image_url}}" alt="">
-        
-    </p>
 
-    {{#if user.isAdmin}}
-    <p>
-        <form action="/menu/{{item._id}}/delete" method="POST">
-            <button type="button" class="btn btn-danger">Delete</button>
-        </form>
-    </p>
-    {{/if}}
+        <p>
+            <strong>Price: </strong> {{item.price}} <br />
+        </p>
+        <p>
+            <strong>Description:</strong>
+            {{item.description}}
+        </p>
+        <p>
+            <strong>Category:</strong>
+            {{item.category}}
+        </p>
 
+        <p>
+            <img class="card-img-details" src="{{item.image_url}}" alt="">
+
+        </p>
+
+        {{#if user.isAdmin}}
+        <div class="container-fluid d-flex flex-start">
+            <a href="/menu/{{item._id}}/edit" class="btn btn-primary mx-3">Edit</a>
+            <form action="/menu/{{item._id}}/delete" method="POST" class="d-inline">
+                <button class="btn btn-danger mx-3">Delete</button>
+            </form>
+        </div>
+        {{/if}}
+    </div>
 </section>
 
 
 
-{{#if user.isAdmin}}
-<a href="/menu/{{item._id}}/edit" class="link-light text-decoration-none">Edit Item</a> | 
-{{/if}}
-<a href="/menu" class="link-light text-decoration-none">Back</a>
+
+<a href="/menu" class="btn btn-primary text-decoration-none">Back</a>

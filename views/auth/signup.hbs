@@ -1,40 +1,44 @@
-<div class="container">
+<div class="d-flex justify-content-center align-items-center">
+  <div class="container">
 
-<h2>Register a new account</h2>
-<section>
-<form action="/auth/signup" class="needs-validation" id="singup-form" method="POST" novalidate >
-  <div class="form-floating mb-3">
-    <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" required>
-    <label for="floatingInput">Email address</label>
-    <div class="invalid-feedback">
-        Please choose a email address.
-    </div>
-  </div>
-<div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" name="passwordHash" placeholder="Password" required>
-  <label for="floatingPassword">Password</label>
-</div>
-   <div class="row g-3">
-      <div class="col-4">
-    <button class="btn btn-primary mt-3" type="submit">Register</button>
-    </div>
-      <div class="col-2 form-check text-white">
-         <input class="form-check-input" type="checkbox" name="isAdmin" value="true" id="flexCheckDefault">
-         <label class="form-check-label" for="flexCheckDefault">
-            Admin
-         </label>
+    <h2 class="blur-bg d-inline-block">Register a new account</h2>
+    <section>
+      <form action="/auth/signup" class="needs-validation" id="singup-form" method="POST" novalidate>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com"
+            required>
+          <label for="floatingInput">Email address</label>
+          <div class="invalid-feedback">
+            Please choose a email address.
+          </div>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" name="passwordHash" placeholder="Password"
+            required>
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="row g-3 d-flex flex-column">
 
-  </div>
-</form>
-</section>
+          <div class="col-8 form-check text-white mt-4 mx-3">
+            <input class="form-check-input" type="checkbox" name="isAdmin" value="true" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">Admin (*) </label>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-primary mt-2" type="submit">Register</button>
+          </div>
+      </form>
+      <div class="col-10 text-white blur-bg">
+        (*) Because it is a <strong>demo</strong> we are allowing that you can register as an admin to test the CRUD functionality. 
+        In a real world application it would not be possible of course.
+      </div>
+    </section>
 
-      
-<div class="text-white">
-   {{#if errorMessage}}
+
+    <div class="text-white">
+      {{#if errorMessage}}
       {{errorMessage}}
-   {{/if}}
-</div>
+      {{/if}}
+    </div>
 
-</div>
-
+  </div>
 </div>

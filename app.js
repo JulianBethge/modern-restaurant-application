@@ -28,6 +28,17 @@ app.locals.appTitle = `${capitalized(projectName)}`;
 // Register the location for handlebars partials here:
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
+// Handlebar helper for preselecting the correct category when editing a product
+hbs.registerHelper("select", function(value, options) {
+    return options.fn(this)
+      .split('\n')
+      .map(function(v) {
+        var t = 'value="' + value + '"'
+        return ! RegExp(t).test(v) ? v : v.replace(t, t + ' selected="selected"')
+      })
+      .join('\n')
+  });
+
 
 // 👇 Start handling routes here
 
