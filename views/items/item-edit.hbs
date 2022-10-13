@@ -4,17 +4,17 @@
 <h2>Edit the item: {{item.title}}</h2>
 
 <form action="/menu/{{item._id}}/edit" method="POST" enctype="multipart/form-data" class="row g-3">
-  <div class="col-md-12">
+  <div class="col-md-4">
     <label for="validationCustom01" class="form-label">Product Name</label>
     <input type="text" name="title" class="form-control" id="validationCustom01" value="{{item.title}}" required>    
   </div>
 
-  <div class="col-md-12">
+  <div class="col-md-4">
     <label for="validationCustom02" class="form-label">Price</label>
     <input type="number" name="price" value="{{item.price}}"  min="0" step="any" class="form-control" id="validationCustom02" required>    
   </div>
 
-  <div class="col-md-12">
+  <div class="col-md-4">
     <label for="validationCustomUsername" class="form-label">Category</label>
     <div>      
       <select class="form-select form-select-sm" name="category" aria-label=".form-select-sm example">
@@ -34,19 +34,23 @@
   
 
 
-  <div class="col-md-12">
+  <div class="col-md-6">
     <label for="formFileSm" class="form-label">Your new image</label>
     <input class="form-control form-control-sm" type="file" id="formFileSm" name="image_url"  accept="image/png, image/jpeg" >    
     
   </div>  
   
-  <div class="col-md-6">
-    <button class="btn btn-primary" type="submit">Submit</button>
+  
+
+  {{!-- <div class="col-md-6">
+   <img src="{{item.image_url}}" alt="..." class="img-fluid w-50 " alt="Responsive image">
+  </div>  --}}
+
+  <div class="col-md-12">
+    <button class="btn btn-primary" type="submit">Edit</button>
   </div>
 
-  <div class="col-md-6">
-   <img src="{{item.image_url}}" alt="..." class="img-fluid" alt="Responsive image">
-  </div> 
+
    
    
 </form>
