@@ -1,47 +1,35 @@
+<div class="container">
+
+  
+  <section class="justify-content-center align-items-center">
+    <h2 class="blur-bg d-inline-block">Log In</h2>
+    <form action="/auth/login" class="needs-validation blur-bg" id="login-form" method="POST" novalidate>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com"
+          required>
+        <label for="floatingInput">Email address</label>
+        <div class="invalid-feedback">
+          Please choose a email address.
+        </div>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" name="passwordHash" placeholder="Password"
+          required>
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div>
+        <button class="btn btn-success mt-3" type="submit">Login</button>
+      </div>
+      <div class="text-white bg-danger mt-3">
+        {{#if errorMessage}}
+        <b>{{errorMessage}}</b>
+        {{/if}}
+      </div>
+    </form>
+
+  </section>
 
 
-<div class="container blur-bg">
 
-<h2>Log In</h2>
-<section class="justify-content-center align-items-center">
-<form action="/auth/login" class="needs-validation" id="login-form" method="POST" novalidate >
-  <div class="form-floating mb-3">
-    <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" required>
-    <label for="floatingInput">Email address</label>
-    <div class="invalid-feedback">
-        Please choose a email address.
-    </div>
-  </div>
-<div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" name="passwordHash" placeholder="Password" required>
-  <label for="floatingPassword">Password</label>
+
 </div>
-   <div>
-    <button class="btn btn-success mt-3" type="submit">Login</button>
-  </div>
-</form>
-</section>
-
-
-<div class="text-white">
-   {{#if errorMessage}}
-      {{errorMessage}}
-   {{/if}}
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
