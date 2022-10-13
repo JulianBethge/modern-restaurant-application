@@ -5,8 +5,6 @@ body {
 
 }
 
-
-
 .gradient {
   background: #8E0E00;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #5f0a00, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
@@ -53,3 +51,10 @@ h1,h2,h3,h4,h6{
   margin-bottom: 5rem;
 }
 
+
+
+
+#login-form, #singup-form {
+  width: 25rem;
+
+}
