@@ -5,14 +5,14 @@
       <input type="text" name="title" value="{{item.title}}" required>
    </label>
    <label> Price:
-      <input type="float" name="price" value="{{item.price}}" required>
+      <input type="number" name="price" value="{{item.price}}" min="0" step="any" required>
    </label>
    <label> Category:
       <select name="category" required>
          <option value="starter">Starter</option>
          <option value="main">Main</option>
          <option value="dessert">Dessert</option>
-         <option value="beverages">beverages</option>
+         <option value="beverages">Beverages</option>
       </select>
    </label>
    <label> Description:
