@@ -16,11 +16,7 @@ const itemSchema = new Schema(
             enum: ["starter", "main", "dessert", "beverages"]
         },
         description: String,
-        image_url: String,
-        menuNumber: {
-            type: Number,
-            unique: false
-        }
+        image_url: String       
     },
     {
         timestamps: true

@@ -11,7 +11,6 @@ const items = [
     category: "main",
     description: "lorem ipsum...",
     image_url: "/images/pizza_salami.jpg",
-    menuNumber: 201,
   },
   {
     title: "Pizza Funghi",
@@ -19,7 +18,6 @@ const items = [
     category: "main",
     description: "lorem ipsum...",
     image_url: "/images/pizza_funghi.jpg",
-    menuNumber: 202,
   },
   {
     title: "Pizza Hawai",
@@ -27,7 +25,6 @@ const items = [
     category: "main",
     description: "lorem ipsum...",
     image_url: "/images/pizza_hawai.jpg",
-    menuNumber: 203,
   },
   {
     title: "Pizza 4 Formaggi",
@@ -35,82 +32,70 @@ const items = [
     category: "main",
     description: "lorem ipsum...",
     image_url: "/images/pizza_quattro_formaggi.jpg",
-    menuNumber: 204,
   },
   {
     title: "Pizza Margarita",
-    price: 10.50,
+    price: 10.5,
     category: "main",
     description: "lorem ipsum...",
     image_url: "/images/pizza_margarita.jpg",
-    menuNumber: 205
-},
-{
-  title: "Garlic Pizza Bread",
-  price: 5.50,
-  category: "starter",
-  description: "lorem ipsum...",
-  image_url: "/images/garlic_pizza_bread.jpg",
-  menuNumber: 1
-},
-{
-  title: "Cheese Pizza Bread",
-  price: 6.50,
-  category: "starter",
-  description: "lorem ipsum...",
-  image_url: "/images/cheesy_pizza_bread.jpg",
-  menuNumber: 2
-},
-{
-  title: "Salami Pizza Bread",
-  price: 6.00,
-  category: "starter",
-  description: "lorem ipsum...",
-  image_url: "/images/garlic_pizza_bread.jpg",
-  menuNumber: 3
-},
-{
-  title: "New York Cheescake",
-  price: 6.00,
-  category: "dessert",
-  description: "lorem ipsum...",
-  image_url: "/images/new_york_cheescake.jpg",
-  menuNumber: 3
-},
-{
-  title: "Tiramisu",
-  price: 6.00,
-  category: "dessert",
-  description: "lorem ipsum...",
-  image_url: "/images/tiramisu.jpg",
-  menuNumber: 3
-},
-{
-  title: "Still Water",
-  price: 2.50,
-  category: "beverages",
-  description: "lorem ipsum...",
-  image_url: "/images/still_water.jpg",
-  menuNumber: 100
-},
-{
-  title: "Sparkling Water",
-  price: 2.50,
-  category: "beverages",
-  description: "lorem ipsum...",
-  image_url: "/images/sparkling_water.jpg",
-  menuNumber: 101
-},
-{
-  title: "Beer 0.4",
-  price: 3.50,
-  category: "beverages",
-  description: "lorem ipsum...",
-  image_url: "/images/beer.jpg",
-  menuNumber: 102
-}
-
-
+  },
+  {
+    title: "Garlic Pizza Bread",
+    price: 5.5,
+    category: "starter",
+    description: "lorem ipsum...",
+    image_url: "/images/garlic_pizza_bread.jpg",
+  },
+  {
+    title: "Cheese Pizza Bread",
+    price: 6.5,
+    category: "starter",
+    description: "lorem ipsum...",
+    image_url: "/images/cheesy_pizza_bread.jpg",
+  },
+  {
+    title: "Salami Pizza Bread",
+    price: 6.0,
+    category: "starter",
+    description: "lorem ipsum...",
+    image_url: "/images/garlic_pizza_bread.jpg",
+  },
+  {
+    title: "New York Cheescake",
+    price: 6.0,
+    category: "dessert",
+    description: "lorem ipsum...",
+    image_url: "/images/new_york_cheescake.jpg",
+  },
+  {
+    title: "Tiramisu",
+    price: 6.0,
+    category: "dessert",
+    description: "lorem ipsum...",
+    image_url: "/images/tiramisu.jpg",
+  },
+  {
+    title: "Still Water",
+    price: 2.5,
+    category: "beverages",
+    description: "lorem ipsum...",
+    image_url: "/images/still_water.jpg",
+  },
+  {
+    title: "Sparkling Water",
+    price: 2.5,
+    category: "beverages",
+    description: "lorem ipsum...",
+    image_url: "/images/sparkling_water.jpg",
+  },
+  {
+    title: "Beer 0.4",
+    price: 3.5,
+    category: "beverages",
+    description: "lorem ipsum...",
+    image_url: "/images/beer.jpg",
+  },
 ];
 
 mongoose

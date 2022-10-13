@@ -85,8 +85,7 @@ router.post("/create", isLoggedIn, isAdmin, fileUploader.single('image_url'), (r
         price: req.body.price,
         category: req.body.category,
         description: req.body.description,
-        image_url: req.file.path,
-        menuNumber: req.body.menuNumber,
+        image_url: req.file.path        
     }
 
     
@@ -123,8 +122,7 @@ router.post("/menu/:itemId/edit", isLoggedIn, isAdmin, fileUploader.single('imag
         price: req.body.price,
         category: req.body.category,
         description: req.body.description,
-        image_url: req.file?.path,
-        menuNumber: req.body.menuNumber,
+        image_url: req.file?.path        
     }
 
 
