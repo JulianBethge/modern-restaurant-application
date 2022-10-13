@@ -32,20 +32,21 @@
 
     <div class="text-white">
       {{#if user}}
-      <h6>Status: Logged in as {{user.email}}</h6>
-      {{/if}}
-      
-      {{#if user.isAdmin}}
-      <h6>Role: Admin</h6>
-      {{/if}}
+        <h6>Logged in as {{user.email}}</h6>
+        
+        
+        {{#if user.isAdmin}}
+        <h6>(Admin)</h6>
+        {{/if}}
 
-      {{#unless user.isAdmin}}
-      Role: User
-      {{/unless}}
+        {{#unless user.isAdmin}}
+        (User)
+        {{/unless}}
+      {{/if}}
 
 
       {{#unless user}}
-        Status: Not logged in
+        Not logged in
       {{/unless}}
       
     </div>
