@@ -1,3 +1,4 @@
+<h2>Login to an existing account</h2>
 <form action="/auth/login" method="POST" class="text-white">
    <label> Email
       <input type="text" name="email">
@@ -8,7 +9,8 @@
 
    <button type="submit">Submit</button>
 </form>
-
-{{#if errorMessage}}
-   {{errorMessage}}
-{{/if}}
+<div class="text-white">
+   {{#if errorMessage}}
+      {{errorMessage}}
+   {{/if}}
+</div>
