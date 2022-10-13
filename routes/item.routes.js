@@ -115,8 +115,10 @@ router.get("/menu/:itemId/edit", isLoggedIn, isAdmin, (req, res, next) => {
 // UPDATE: Process form
 router.post("/menu/:itemId/edit", isLoggedIn, isAdmin, fileUploader.single('image_url'), (req, res, next) => {
    
+    
+
     const itemId = req.params.itemId;
-    // console.log("HERE IS THE REQ"+ req.file.path);find()
+    
     const newDetails = {
         title: req.body.title,
         price: req.body.price,

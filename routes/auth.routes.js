@@ -112,16 +112,8 @@ router.post("/auth/login", isLoggedOut, (req, res, next) => {
       .status(400)
       .render("auth/login", { errorMessage: "Please provide your email." });
   }
-
-  // Here we use the same logic as above
-  // - either length based parameters or we check the strength of a password
-  if (passwordHash.length < 8) {
-    return res
-      .status(400)
-      .render("auth/login", {
-        errorMessage: "Your password needs to be at least 8 characters long.",
-      });
-  }
+  
+  
 
   // Search the database for a user with the email submitted in the form
   User.findOne({ email })
@@ -130,7 +122,7 @@ router.post("/auth/login", isLoggedOut, (req, res, next) => {
       if (!user) {
         return res
           .status(400)
-          .render("auth/login", { errorMessage: "Wrong credentials." });
+          .render("auth/login", { errorMessage: "Wrong Email Address." });
       }
 
       // If user is found based on the email, check if the in putted password matches the one saved in the database
@@ -138,7 +130,7 @@ router.post("/auth/login", isLoggedOut, (req, res, next) => {
         if (!isSamePassword) {
           return res
             .status(400)
-            .render("auth/login", { errorMessage: "Wrong credentials." });
+            .render("auth/login", { errorMessage: "Wrong password." });
         }
 
         req.session.user = user;
