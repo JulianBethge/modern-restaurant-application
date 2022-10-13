@@ -1,70 +1,58 @@
-<br>
-<br>
-<br>
-<br>
-
-
-
-<section>
-
-
 <div class="container">
 
-<h1>Menu</h1>
-<h2>Starters</h2>
-<div class="d-flex flex-row gap-m flex-wrap category">
-    {{#if user.isAdmin}}
-    {{#each startersArr}}
-    {{> itemadmincard}}
-    {{/each}}
-    {{else}}
-    {{#each startersArr}}
-    {{> itemusercard}}
-    {{/each}}
-    
-    {{/if}}
+    <h1>Menu</h1>
+    <h2>Starters</h2>
+    <div class="d-flex flex-row gap-m flex-wrap category">
+        {{#if user.isAdmin}}
+        {{#each startersArr}}
+        {{> itemadmincard}}
+        {{/each}}
+        {{else}}
+        {{#each startersArr}}
+        {{> itemusercard}}
+        {{/each}}
+
+        {{/if}}
+    </div>
+
+    <h2>Main Dishes</h2>
+    <div class="d-flex flex-row gap-m flex-wrap category">
+        {{#if user.isAdmin}}
+        {{#each mainsArr}}
+        {{> itemadmincard}}
+        {{/each}}
+        {{else}}
+        {{#each mainsArr}}
+        {{> itemusercard}}
+        {{/each}}
+        {{/if}}
+
+    </div>
+    <h2>Desserts</h2>
+    <div class="d-flex flex-row gap-m flex-wrap category">
+        {{#if user.isAdmin}}
+        {{#each desertsArr}}
+        {{> itemadmincard}}
+        {{/each}}
+        {{else}}
+        {{#each desertsArr}}
+        {{> itemusercard}}
+        {{/each}}
+        {{/if}}
+
+    </div>
+
+    <h2>Beverages</h2>
+    <div class="d-flex flex-row gap-m flex-wrap category">
+        {{#if user.isAdmin}}
+        {{#each beveragesArr}}
+        {{> itemadmincard}}
+        {{/each}}
+        {{else}}
+        {{#each beveragesArr}}
+        {{> itemusercard}}
+        {{/each}}
+        {{/if}}
+    </div>
+
 </div>
-
-<h2>Main Dishes</h2>
-<div class="d-flex flex-row gap-m flex-wrap category">
-    {{#if user.isAdmin}}
-    {{#each mainsArr}}
-    {{> itemadmincard}}
-    {{/each}}
-    {{else}}
-    {{#each mainsArr}}
-    {{> itemusercard}}
-    {{/each}}
-    {{/if}}
-
-</div>
-<h2>Desserts</h2>
-<div class="d-flex flex-row gap-m flex-wrap category">
-    {{#if user.isAdmin}}
-    {{#each desertsArr}}
-    {{> itemadmincard}}
-    {{/each}}
-    {{else}}
-    {{#each desertsArr}}
-    {{> itemusercard}}
-    {{/each}}
-    {{/if}}
-
-</div>
-
-<h2>Beverages</h2>
-<div class="d-flex flex-row gap-m flex-wrap category">
-    {{#if user.isAdmin}}
-    {{#each beveragesArr}}
-    {{> itemadmincard}}
-    {{/each}}
-    {{else}}
-    {{#each beveragesArr}}
-    {{> itemusercard}}
-    {{/each}}
-    {{/if}}
-</div>
-
-</div>
-
-</section>
