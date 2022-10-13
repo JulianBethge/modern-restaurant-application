@@ -22,7 +22,7 @@
     {{#if user.isAdmin}}
     <p>
         <form action="/menu/{{item._id}}/delete" method="POST">
-            <button>Delete</button>
+            <button type="button" class="btn btn-danger">Delete</button>
         </form>
     </p>
     {{/if}}
