@@ -150,6 +150,19 @@ router.post("/menu/:itemId/delete", isLoggedIn, isAdmin, (req, res, next) => {
   });
 
 
+  // Keep Me Alive
+router.get('/keep-alive', (req, res, next) => {
+  Item.find()
+    .then(() => {
+      res.status(200).json({ message: 'It worked' });
+    })
+    .catch(() => {
+      res.status(500).json({ message: "It didn't work" });
+    });
+});
+
+
+
 // Export router
 module.exports = router;
 
