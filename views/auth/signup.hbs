@@ -1,24 +1,43 @@
-<h2>Register a new account</h2>
-<form action="/auth/signup" method="POST" class="text-white">
-   <label> Email
-      <input type="text" name="email">
-   </label>
-   <label> Password
-      <input type="password" name="passwordHash">
-   </label>
+<br>
+<br>
+<br>
 
-  <div class="form-check">
-  <input class="form-check-input" type="checkbox" name="isAdmin" value="true" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    Admin
-  </label>
+
+
+ <h2>Register a new account</h2>
+<section>
+<form action="/auth/signup" class="needs-validation" id="singup-form" method="POST" novalidate >
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" required>
+    <label for="floatingInput">Email address</label>
+    <div class="invalid-feedback">
+        Please choose a email address.
+    </div>
+  </div>
+<div class="form-floating">
+  <input type="password" class="form-control" id="floatingPassword" name="passwordHash" placeholder="Password" required>
+  <label for="floatingPassword">Password</label>
 </div>
+   <div class="row g-3">
+      <div class="col-4">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+      <div class="col-2 form-check">
+         <input class="form-check-input" type="checkbox" name="isAdmin" value="true" id="flexCheckDefault">
+         <label class="form-check-label" for="flexCheckDefault">
+            Admin
+         </label>
 
-   <button type="submit" class="btn btn-success">Submit</button>
+  </div>
 </form>
+</section>
 
+      
 <div class="text-white">
    {{#if errorMessage}}
       {{errorMessage}}
    {{/if}}
 </div>
+
+
+
