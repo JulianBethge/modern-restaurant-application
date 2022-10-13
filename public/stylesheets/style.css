@@ -1,11 +1,11 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
- 
-
+  padding: 6rem;
   min-height: 100vh;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 
 }
+
+
 
 .gradient {
   background: #8E0E00;  /* fallback for old browsers */
