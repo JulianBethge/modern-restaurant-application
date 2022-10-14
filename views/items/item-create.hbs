@@ -1,44 +1,43 @@
 <div class="container text-white blur-bg">
+  <h2 class="d-inline-block">Create a new product</h2>
+  <form action="/create" method="POST" enctype="multipart/form-data" class="row g-3">
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Product Name</label>
+      <input type="text" name="title" class="form-control" id="validationCustom01" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Price</label>
+      <input type="number" name="price" min="0" step="any" class="form-control" id="validationCustom02" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Category</label>
+      <div>
+        <select class="form-select form-select-sm" name="category" aria-label=".form-select-sm example" required>
+          <option value="" selected>Select category</option>
+          <option value="starter">Starter</option>
+          <option value="main">Main</option>
+          <option value="dessert">Dessert</option>
+          <option value="beverages">Beverages</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3" required></textarea>
 
-<form action="/create" method="POST" enctype="multipart/form-data" class="row g-3">
-  <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">Product Name</label>
-    <input type="text" name="title" class="form-control" id="validationCustom01" required>    
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">Price</label>
-    <input type="number" name="price"  min="0" step="any" class="form-control" id="validationCustom02" required>    
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label">Category</label>
-    <div>      
-      <select class="form-select form-select-sm" name="category" aria-label=".form-select-sm example" required>
-         <option value="" selected>Select category</option>
-         <option value="starter">Starter</option>
-         <option value="main">Main</option>
-         <option value="dessert">Dessert</option>
-         <option value="beverages">Beverages</option>
-      </select>      
     </div>
-  </div>
-  <div class="col-md-12">
-    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3" required></textarea>
-    
-  </div>
-  <div class="col-md-6">
-    <label for="formFileSm" class="form-label">Your image here</label>
-    <input class="form-control form-control-sm" type="file" id="formFileSm" name="image_url" accept="image/png, image/jpeg" required>
-    <div class="invalid-feedback"> 
-      Please select a valid image.
+    <div class="col-md-6">
+      <label for="formFileSm" class="form-label">Your image here</label>
+      <input class="form-control form-control-sm" type="file" id="formFileSm" name="image_url"
+        accept="image/png, image/jpeg" required>
+      <div class="invalid-feedback">
+        Please select a valid image.
+      </div>
     </div>
-  </div>  
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit</button>
-  </div>
-</form>
+    <div class="col-12">
+      <button class="btn btn-success" type="submit">Confirm</button>
+    </div>
+  </form>
 
 
 </div>
-
-
