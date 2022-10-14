@@ -34,10 +34,10 @@ For deployment local or online you need:
 - CSS
 
 ### About the Authors
-**Michel Pomares**
+[Michel Pomares](https://github.com/Michel537)
 Berlin  
 Full Stack Web Developer
 
-**Julian Bethge** 
+[Julian Bethge](https://github.com/julianBrandon)
 Berlin  
 Full Stack Web Developer
