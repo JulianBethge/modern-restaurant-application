@@ -2,7 +2,7 @@
 
 With this application a restaurant owner can create, read, update and delete products for the food menu. The visitors of the webpage can read the menu and see the details.
 
-**Demo: [Check the live demo](https://modern-restaurant-application.herokuapp.com/)**
+**Demo: [Check the live demo](https://modern-restaurant-application.adaptable.app)**
 
 ### Facts & Features
 - Adding, editing or deleting products from the menu.
