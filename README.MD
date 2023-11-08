@@ -38,6 +38,6 @@ For deployment local or online you need:
 Berlin  
 Full Stack Web Developer
 
-[Julian Bethge](https://github.com/julianBrandon)
+[Julian Bethge](https://github.com/julianBethge)
 Berlin  
 Full Stack Web Developer
