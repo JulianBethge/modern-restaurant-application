@@ -20,7 +20,7 @@ You can read the menu at all times.
 For deployment local or online you need:
 - Install dependencies (`npm install`)
 - Parameters for .env:
-    - MongoDB_URI (connection to a MongoDB Database)
+    - MONGODB_URI (connection to a MongoDB Database)
     - [Cloudinary](https://cloudinary.com/) API key, name and secret
 - Run the application (`npm run dev`) 
 
