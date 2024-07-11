@@ -39,6 +39,12 @@ hbs.registerHelper("select", function(value, options) {
       .join('\n')
   });
 
+// Handlebar helper for formatting price
+hbs.registerHelper('toFixed', function(number) {
+    return number.toFixed(2);
+});
+
+
 
 // 👇 Start handling routes here
 
