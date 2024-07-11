@@ -1,8 +1,16 @@
 const mongoose = require('mongoose');
+require('dotenv').config(); // Importiert und konfiguriert dotenv
+
 
 const Item = require('../models/Item.model');
 
-const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost/modern-restaurant-application';
+const MONGO_URI = process.env.MONGODB_URI;
+
+// Check if MONGO_URI is defined
+if (!MONGO_URI) {
+  console.error("Error: MONGODB_URI is not defined in the environment variables. ");
+  process.exit(1);
+}
 
 const items = [
   {
